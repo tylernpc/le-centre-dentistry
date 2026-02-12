@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import {useState} from 'react';
+import {motion, useScroll, useTransform} from 'framer-motion';
 import {
     Menu,
     X,
@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const { scrollY } = useScroll();
+    const {scrollY} = useScroll();
     const headerBackground = useTransform(
         scrollY,
         [0, 100],
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="min-h-screen bg-white">
             {/* Navigation */}
             <motion.nav
-                style={{ backgroundColor: headerBackground }}
+                style={{backgroundColor: headerBackground}}
                 className="fixed top-0 w-full z-50 transition-all duration-300"
             >
                 <motion.div
@@ -37,8 +37,8 @@ export default function Home() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between items-center h-24">
                             <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
+                                initial={{opacity: 0, x: -20}}
+                                animate={{opacity: 1, x: 0}}
                                 className="flex items-center"
                             >
                                 <div className="relative">
@@ -46,12 +46,12 @@ export default function Home() {
                                         className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 blur-sm opacity-70 rounded-full"></div>
                                     <div
                                         className="relative bg-gradient-to-br from-blue-600 to-indigo-600 w-12 h-12 rounded-full flex items-center justify-center">
-                                        <Sparkles className="w-6 h-6 text-white" />
+                                        <Sparkles className="w-6 h-6 text-white"/>
                                     </div>
                                 </div>
                                 <div className="ml-4">
                                     <div className="text-xl font-serif text-gray-900"
-                                        style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                                         style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                         Le Centre Dentistry
                                     </div>
                                     <div className="text-xs tracking-widest text-gray-500 uppercase">Excellence in
@@ -63,25 +63,25 @@ export default function Home() {
                             {/* Desktop Menu */}
                             <div className="hidden lg:flex items-center space-x-8">
                                 <a href="#philosophy"
-                                    className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Philosophy</a>
+                                   className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Philosophy</a>
                                 <a href="#services"
-                                    className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Services</a>
+                                   className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Services</a>
                                 <a href="#expertise"
-                                    className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Expertise</a>
+                                   className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Expertise</a>
                                 <a href="#testimonials"
-                                    className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Testimonials</a>
+                                   className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Testimonials</a>
                                 <a href="#contact"
-                                    className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Contact</a>
+                                   className="text-gray-700 hover:text-blue-600 transition-colors text-sm tracking-wide">Contact</a>
                                 <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.05}}
+                                    whileTap={{scale: 0.95}}
                                     className="relative group"
                                 >
                                     <div
                                         className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur group-hover:blur-md transition-all"></div>
                                     <div
                                         className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full flex items-center gap-2 text-sm tracking-wide">
-                                        <Calendar className="w-4 h-4" />
+                                        <Calendar className="w-4 h-4"/>
                                         Book Consultation
                                     </div>
                                 </motion.button>
@@ -92,7 +92,7 @@ export default function Home() {
                                 className="lg:hidden text-gray-700"
                                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             >
-                                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                                {mobileMenuOpen ? <X className="w-6 h-6"/> : <Menu className="w-6 h-6"/>}
                             </button>
                         </div>
                     </div>
@@ -101,24 +101,24 @@ export default function Home() {
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{opacity: 0, y: -20}}
+                        animate={{opacity: 1, y: 0}}
                         className="lg:hidden bg-white/95 backdrop-blur-lg border-b border-gray-100"
                     >
                         <div className="px-4 py-6 space-y-4">
                             <a href="#philosophy"
-                                className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Philosophy</a>
+                               className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Philosophy</a>
                             <a href="#services"
-                                className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Services</a>
+                               className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Services</a>
                             <a href="#expertise"
-                                className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Expertise</a>
+                               className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Expertise</a>
                             <a href="#testimonials"
-                                className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Testimonials</a>
+                               className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Testimonials</a>
                             <a href="#contact"
-                                className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Contact</a>
+                               className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Contact</a>
                             <button
                                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full flex items-center justify-center gap-2 text-sm tracking-wide">
-                                <Calendar className="w-4 h-4" />
+                                <Calendar className="w-4 h-4"/>
                                 Book Consultation
                             </button>
                         </div>
@@ -139,14 +139,14 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div
-                            initial={{ opacity: 0, y: 40 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, ease: "easeOut" }}
+                            initial={{opacity: 0, y: 40}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 1, ease: "easeOut"}}
                         >
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2, duration: 0.8 }}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{delay: 0.2, duration: 0.8}}
                                 className="inline-block mb-6"
                             >
                                 <div
@@ -158,7 +158,7 @@ export default function Home() {
                             </motion.div>
 
                             <h1 className="text-6xl lg:text-7xl xl:text-8xl mb-8 leading-[1.1]"
-                                style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                                style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                 <span className="text-gray-900 block">Where Science</span>
                                 <span className="text-gray-900 block">Meets</span>
                                 <span
@@ -172,8 +172,8 @@ export default function Home() {
 
                             <div className="flex flex-wrap gap-4 mb-12">
                                 <motion.button
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.05, y: -2}}
+                                    whileTap={{scale: 0.95}}
                                     className="group relative"
                                 >
                                     <div
@@ -181,13 +181,13 @@ export default function Home() {
                                     <div
                                         className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full flex items-center gap-3">
                                         <span className="tracking-wide">Begin Your Journey</span>
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
                                     </div>
                                 </motion.button>
 
                                 <motion.button
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.05, y: -2}}
+                                    whileTap={{scale: 0.95}}
                                     className="px-8 py-4 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 tracking-wide"
                                 >
                                     Explore Services
@@ -197,7 +197,7 @@ export default function Home() {
                             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
                                 <div>
                                     <div className="text-4xl font-serif mb-1"
-                                        style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                                         style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                         <span
                                             className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">17</span>
                                     </div>
@@ -205,7 +205,7 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <div className="text-4xl font-serif mb-1"
-                                        style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                                         style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                         <span
                                             className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">8K+</span>
                                     </div>
@@ -213,7 +213,7 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <div className="text-4xl font-serif mb-1"
-                                        style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                                         style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                         <span
                                             className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">99%</span>
                                     </div>
@@ -223,9 +223,9 @@ export default function Home() {
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1, delay: 0.3 }}
+                            initial={{opacity: 0, scale: 0.95}}
+                            animate={{opacity: 1, scale: 1}}
+                            transition={{duration: 1, delay: 0.3}}
                             className="relative"
                         >
                             <div className="relative">
@@ -242,9 +242,9 @@ export default function Home() {
 
                                 {/* Floating Card */}
                                 <motion.div
-                                    initial={{ opacity: 0, x: -30 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.8, duration: 0.8 }}
+                                    initial={{opacity: 0, x: -30}}
+                                    animate={{opacity: 1, x: 0}}
+                                    transition={{delay: 0.8, duration: 0.8}}
                                     className="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-2xl p-6 max-w-xs"
                                 >
                                     <div className="flex items-start gap-4">
@@ -253,12 +253,12 @@ export default function Home() {
                                                 className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 blur-md rounded-xl"></div>
                                             <div
                                                 className="relative w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-                                                <Award className="w-7 h-7 text-white" />
+                                                <Award className="w-7 h-7 text-white"/>
                                             </div>
                                         </div>
                                         <div>
                                             <div className="text-2xl font-serif mb-1"
-                                                style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                                                 style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                                 Award Winning
                                             </div>
                                             <div className="text-sm text-gray-600">Recognized for excellence in cosmetic

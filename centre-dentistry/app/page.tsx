@@ -351,7 +351,6 @@ export default function Home() {
                 </div>
             </section>
 
-
     {/* Philosophy Section */}
     <section id="philosophy" className="py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]">
@@ -525,6 +524,11 @@ export default function Home() {
             </div>
         </div>
     </section>
+
+
+            {/* THIS IS THE DIVIDE */}
+
+
 
             {/* Expertise Banner */}
     <section id="expertise" className="py-24 bg-white">

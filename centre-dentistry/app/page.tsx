@@ -545,7 +545,7 @@ export default function Home() {
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
                 transition={{duration: 0.8}}
-                className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 p-12 lg:p-16"
+                className="relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 via-indigo-600 to-blue-700 p-12 lg:p-16"
             >
                 {/* Decorative Pattern */}
                 <div className="absolute inset-0 opacity-10">
@@ -576,7 +576,7 @@ export default function Home() {
                             ].map((credential, index) => (
                                 <div key={index} className="flex items-center gap-3">
                                     <div
-                                        className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                        className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center shrink-0">
                                         <Check className="w-4 h-4 text-white"/>
                                     </div>
                                     <span className="text-white">{credential}</span>
@@ -599,7 +599,7 @@ export default function Home() {
                             <img
                                 src="https://images.unsplash.com/photo-1642975967602-653d378f3b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25maWRlbnQlMjBwcm9mZXNzaW9uYWwlMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzA4NjM4OTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                                 alt="Dr. Sarah Johnson"
-                                className="w-full h-[500px] object-cover"
+                                className="w-full h-125 object-cover"
                             />
                         </div>
                     </div>
@@ -609,7 +609,7 @@ export default function Home() {
     </section>
 
             {/* Testimonials Section */}
-    <section id="testimonials" className="py-32 bg-gradient-to-br from-gray-50 to-blue-50/30">
+    <section id="testimonials" className="py-32 bg-linear-to-br from-gray-50 to-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
                 initial={{opacity: 0, y: 30}}
@@ -629,7 +629,7 @@ export default function Home() {
                     <span className="text-gray-900">Stories of</span>
                     <br/>
                     <span
-                        className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Transformation</span>
+                        className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Transformation</span>
                 </h2>
             </motion.div>
 
@@ -645,7 +645,7 @@ export default function Home() {
                     >
                         <div className="relative h-full">
                             <div
-                                className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500 opacity-5"></div>
+                                className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-600 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500 opacity-5"></div>
                             <div
                                 className="relative bg-white rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
                                 <div className="flex gap-1 mb-6">
@@ -654,7 +654,7 @@ export default function Home() {
                                     ))}
                                 </div>
 
-                                <p className="text-lg text-gray-700 mb-8 leading-relaxed flex-grow italic">
+                                <p className="text-lg text-gray-700 mb-8 leading-relaxed grow italic">
                                     &ldquo;{testimonial.text}&rdquo;
                                 </p>
 
@@ -698,7 +698,7 @@ export default function Home() {
                         <span className="text-gray-900">Begin Your</span>
                         <br/>
                         <span
-                            className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Journey</span>
+                            className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Journey</span>
                     </h2>
 
                     <p className="text-lg text-gray-600 mb-12 leading-relaxed">
@@ -711,9 +711,9 @@ export default function Home() {
                             <div className="flex items-start gap-4">
                                 <div className="relative">
                                     <div
-                                        className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-50 transition-opacity rounded-xl"></div>
+                                        className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-50 transition-opacity rounded-xl"></div>
                                     <div
-                                        className="relative w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                                        className="relative w-14 h-14 bg-linear-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
                                         <Phone className="w-6 h-6 text-white"/>
                                     </div>
                                 </div>
@@ -728,9 +728,9 @@ export default function Home() {
                             <div className="flex items-start gap-4">
                                 <div className="relative">
                                     <div
-                                        className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-50 transition-opacity rounded-xl"></div>
+                                        className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-50 transition-opacity rounded-xl"></div>
                                     <div
-                                        className="relative w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                                        className="relative w-14 h-14 bg-linear-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
                                         <Mail className="w-6 h-6 text-white"/>
                                     </div>
                                 </div>
@@ -774,7 +774,7 @@ export default function Home() {
                 >
                     <div className="relative">
                         <div
-                            className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl transform rotate-1"></div>
+                            className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-600 rounded-3xl transform rotate-1"></div>
                         <div className="relative bg-white rounded-3xl p-8 lg:p-12 shadow-2xl">
                             <h3 className="text-3xl font-serif mb-8"
                                 style={{fontFamily: "'Cormorant Garamond', serif"}}>
@@ -853,9 +853,9 @@ export default function Home() {
                                     className="w-full relative group"
                                 >
                                     <div
-                                        className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl blur-lg group-hover:blur-xl transition-all opacity-50"></div>
+                                        className="absolute inset-0 bg-linear-to-r from-blue-600 to-indigo-600 rounded-xl blur-lg group-hover:blur-xl transition-all opacity-50"></div>
                                     <div
-                                        className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-5 rounded-xl flex items-center justify-center gap-3 text-lg tracking-wide">
+                                        className="relative bg-linear-to-r from-blue-600 to-indigo-600 text-white px-8 py-5 rounded-xl flex items-center justify-center gap-3 text-lg tracking-wide">
                                         <span>Submit Request</span>
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
                                     </div>
@@ -869,13 +869,13 @@ export default function Home() {
     </section>
 
             {/* Footer */}
-    <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-16">
+    <footer className="bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-4 gap-12 mb-12">
                 <div className="md:col-span-2">
                     <div className="flex items-center mb-6">
                         <div
-                            className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full flex items-center justify-center">
+                            className="w-12 h-12 bg-linear-to-br from-blue-400 to-indigo-400 rounded-full flex items-center justify-center">
                             <Sparkles className="w-6 h-6 text-white"/>
                         </div>
                         <div className="ml-4">

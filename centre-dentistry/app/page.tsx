@@ -712,7 +712,7 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <div className="text-sm text-gray-500 tracking-wide uppercase mb-1">Phone</div>
-                                    <div className="text-xl text-gray-900">(555) 123-4567</div>
+                                    <div className="text-xl text-gray-900">(612) 503-5975</div>
                                 </div>
                             </div>
                         </div>
@@ -738,17 +738,19 @@ export default function Home() {
                             <div className="flex items-start gap-4">
                                 <div className="relative">
                                     <div
-                                        className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-50 transition-opacity rounded-xl"></div>
+                                        className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-600 blur-md opacity-0 group-hover:opacity-50 transition-opacity rounded-xl"></div>
                                     <div
-                                        className="relative w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                                        className="relative w-14 h-14 bg-linear-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
                                         <Clock className="w-6 h-6 text-white"/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="text-sm text-gray-500 tracking-wide uppercase mb-1">Hours</div>
                                     <div className="text-gray-900">
-                                        <div>Mon - Fri: 8:00 AM - 6:00 PM</div>
-                                        <div>Sat: 9:00 AM - 3:00 PM</div>
+                                        <div>Monday: 8:00am - 5:00pm</div>
+                                        <div>Tuesday: 8:00am - 5:00pm</div>
+                                        <div>Wednesday: 8:00am - 5:00pm</div>
+                                        <div>Thursday: 7:00 AM - 3:30 PM</div>
                                     </div>
                                 </div>
                             </div>

@@ -311,7 +311,7 @@ export default function Home() {
                                         alt="Le Centre Dentistry Interior"
                                         width={1080}
                                         height={700}
-                                        className="w-full h-43.75 object-cover"
+                                        className="w-full h-200 object-cover"
                                         priority
                                     />
                                     <div

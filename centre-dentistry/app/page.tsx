@@ -1,6 +1,7 @@
 'use client';
 
 import {useState} from 'react';
+import Image from "next/image";
 import {motion, useScroll, useTransform} from 'framer-motion';
 import {
     Menu,
@@ -191,7 +192,7 @@ export default function Home() {
                             <a href="#contact"
                                className="block text-gray-700 hover:text-blue-600 text-sm tracking-wide">Contact</a>
                             <button
-                                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full flex items-center justify-center gap-2 text-sm tracking-wide">
+                                className="w-full bg-linear-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full flex items-center justify-center gap-2 text-sm tracking-wide">
                                 <Calendar className="w-4 h-4"/>
                                 Book Consultation
                             </button>
@@ -202,12 +203,12 @@ export default function Home() {
 
             {/* Hero Section */}
             <section
-                className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
+                className="relative min-h-screen flex items-center overflow-hidden bg-linear-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
                 {/* Decorative Elements */}
                 <div className="absolute inset-0 overflow-hidden">
                     <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl"></div>
                     <div
-                        className="absolute bottom-1/4 -right-48 w-[600px] h-[600px] bg-indigo-200/20 rounded-full blur-3xl"></div>
+                        className="absolute bottom-1/4 -right-48 w-150 h-150 bg-indigo-200/20 rounded-full blur-3xl"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
@@ -236,7 +237,7 @@ export default function Home() {
                                 <span className="text-gray-900 block">Where Science</span>
                                 <span className="text-gray-900 block">Meets</span>
                                 <span
-                                    className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block">Artistry</span>
+                                    className="bg-linear-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent block">Artistry</span>
                             </h1>
 
                             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl">
@@ -251,9 +252,9 @@ export default function Home() {
                                     className="group relative"
                                 >
                                     <div
-                                        className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-lg group-hover:blur-xl transition-all opacity-50"></div>
+                                        className="absolute inset-0 bg-linear-to-r from-blue-600 to-indigo-600 rounded-full blur-lg group-hover:blur-xl transition-all opacity-50"></div>
                                     <div
-                                        className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full flex items-center gap-3">
+                                        className="relative bg-linear-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full flex items-center gap-3">
                                         <span className="tracking-wide">Begin Your Journey</span>
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
                                     </div>
@@ -273,7 +274,7 @@ export default function Home() {
                                     <div className="text-4xl font-serif mb-1"
                                          style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                         <span
-                                            className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">17</span>
+                                            className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">17</span>
                                     </div>
                                     <div className="text-sm text-gray-600 tracking-wide">Years Excellence</div>
                                 </div>
@@ -281,7 +282,7 @@ export default function Home() {
                                     <div className="text-4xl font-serif mb-1"
                                          style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                         <span
-                                            className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">8K+</span>
+                                            className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">8K+</span>
                                     </div>
                                     <div className="text-sm text-gray-600 tracking-wide">Smiles Crafted</div>
                                 </div>
@@ -289,7 +290,7 @@ export default function Home() {
                                     <div className="text-4xl font-serif mb-1"
                                          style={{fontFamily: "'Cormorant Garamond', serif"}}>
                                         <span
-                                            className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">99%</span>
+                                            className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">99%</span>
                                     </div>
                                     <div className="text-sm text-gray-600 tracking-wide">Satisfaction</div>
                                 </div>
@@ -305,13 +306,16 @@ export default function Home() {
                             <div className="relative">
                                 {/* Main Image */}
                                 <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                                    <img
+                                    <Image
                                         src="https://images.unsplash.com/photo-1616391182219-e080b4d1043a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBkZW50YWwlMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzA4NjM4OTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                                         alt="Le Centre Dentistry Interior"
-                                        className="w-full h-[700px] object-cover"
+                                        width={1080}
+                                        height={700}
+                                        className="w-full h-200 object-cover"
+                                        priority
                                     />
                                     <div
-                                        className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
+                                        className="absolute inset-0 bg-linear-to-t from-blue-900/40 via-transparent to-transparent"></div>
                                 </div>
 
                                 {/* Floating Card */}
@@ -324,9 +328,9 @@ export default function Home() {
                                     <div className="flex items-start gap-4">
                                         <div className="relative">
                                             <div
-                                                className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 blur-md rounded-xl"></div>
+                                                className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-600 blur-md rounded-xl"></div>
                                             <div
-                                                className="relative w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                                                className="relative w-14 h-14 bg-linear-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
                                                 <Award className="w-7 h-7 text-white"/>
                                             </div>
                                         </div>
@@ -344,7 +348,7 @@ export default function Home() {
 
                                 {/* Decorative Element */}
                                 <div
-                                    className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full blur-2xl opacity-40"></div>
+                                    className="absolute -top-6 -right-6 w-32 h-32 bg-linear-to-br from-blue-400 to-indigo-500 rounded-full blur-2xl opacity-40"></div>
                             </div>
                         </motion.div>
                     </div>
@@ -379,7 +383,7 @@ export default function Home() {
                     <span className="text-gray-900">The Pillars of Our</span>
                     <br/>
                     <span
-                        className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Practice</span>
+                        className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Practice</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     Excellence in dentistry requires more than technical skill—it demands passion, innovation, and an
@@ -398,15 +402,15 @@ export default function Home() {
                         className="group"
                     >
                         <div
-                            className="relative p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/30 hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-blue-200">
+                            className="relative p-8 lg:p-10 rounded-2xl bg-linear-to-br from-gray-50 to-blue-50/30 hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-blue-200">
                             <div
-                                className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-blue-600 to-indigo-600 rounded-l-2xl transform origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
+                                className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-blue-600 to-indigo-600 rounded-l-2xl transform origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
 
                             <div className="relative">
                                 <div className="mb-6">
                                     <div className="relative inline-block">
                                         <div
-                                            className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 rounded-full"></div>
+                                            className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-600 blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 rounded-full"></div>
                                         <div
                                             className="relative w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg">
                                             <point.icon className="w-8 h-8 text-blue-600"/>
@@ -431,12 +435,12 @@ export default function Home() {
 
             {/* Services Section */}
     <section id="services"
-             className="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+             className="py-32 bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div
-                className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl"></div>
+                className="absolute bottom-0 right-1/4 w-150 h-150 bg-indigo-500/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -478,13 +482,16 @@ export default function Home() {
                             className={`grid lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                             <div
                                 className={`relative overflow-hidden rounded-3xl ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                                <img
+                                <Image
                                     src={service.image}
                                     alt={service.title}
-                                    className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
+                                    width={1200}
+                                    height={500}
+                                    className="w-full h-31.25 object-cover group-hover:scale-110 transition-transform duration-700"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
                                 />
                                 <div
-                                    className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
+                                    className="absolute inset-0 bg-linear-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
                             </div>
 
                             <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
@@ -502,7 +509,7 @@ export default function Home() {
                                         {service.treatments.map((treatment, idx) => (
                                             <div key={idx} className="flex items-center gap-3">
                                                 <div
-                                                    className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full"></div>
+                                                    className="w-1.5 h-1.5 bg-linear-to-r from-blue-400 to-indigo-400 rounded-full"></div>
                                                 <span className="text-gray-200">{treatment}</span>
                                             </div>
                                         ))}
